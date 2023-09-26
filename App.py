@@ -101,6 +101,7 @@ product(name="macbook",price=150000);
 def chocolate():
     print("Chocolate");
 
+
 def decorator(func):#passing function as argument
     def wrapper():
         print("Wrapper up side");
@@ -108,5 +109,20 @@ def decorator(func):#passing function as argument
         print("Wrapper down side");
     return wrapper;
 
-chocolate = decorator(chocolate);
-chocolate();
+
+#chocolate = decorator(chocolate);
+
+@decorator
+def iceCream():
+    print("Ice cream");
+
+
+@decorator
+def cake():
+    print("Cake");
+
+iceCream();
+cake();
+
+
+
