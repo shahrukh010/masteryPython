@@ -95,3 +95,18 @@ def product(**kwargs):
 product(name="iphone",price=56000);
 product(name="macbook",price=150000);
 
+#decorator
+#chaning behaviour of function
+
+def chocolate():
+    print("Chocolate");
+
+def decorator(func):#passing function as argument
+    def wrapper():
+        print("Wrapper up side");
+        func();
+        print("Wrapper down side");
+    return wrapper;
+
+chocolate = decorator(chocolate);
+chocolate();
