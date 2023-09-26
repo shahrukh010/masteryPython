@@ -102,7 +102,7 @@ def chocolate():
     print("Chocolate");
 
 
-def decorator(func):#passing function as argument
+def decorator(func):#passing function as argument decorator is decorator name you can take anything(product)
     def wrapper():
         print("Wrapper up side");
         func();
