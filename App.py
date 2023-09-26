@@ -75,3 +75,23 @@ else:
 
 
 
+
+
+#variable length positional arguments
+def add(*args):
+    for data in args:
+        print(data);
+
+add(10,20,30,40);
+
+
+#keyword argument
+
+def product(**kwargs):
+    
+    for key,value in kwargs.items():
+        print(key,":",value);
+
+product(name="iphone",price=56000);
+product(name="macbook",price=150000);
+
