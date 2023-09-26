@@ -17,4 +17,16 @@ current_time = datetime.datetime.now();
 print(current_time);
 
 
+a =int(input("Enter first number"));
+b =int(input("Enter second number"));
+
+try:
+    result = a/b;
+except:
+    'divison by zero';
+else:#else block will be executed when exception not raise
+    print(result);
+finally:
+    print("this code will executed no matter what");
+
 
