@@ -34,5 +34,15 @@ print('result:',searchInArray(arr1,6));
 
 import numpy as np;
 
-twoDArray = np.array([[1,2,3],[4,5,6],[7,8,9]]);
-print(twoDArray);
+twoDarray = np.array([[1,2,3],[4,5,6],[7,8,9]]);
+print(twoDarray);
+
+#insert element on column wise
+newTwoDarray = np.insert(twoDarray,0,[[10,20,30]],axis=1);
+
+print(newTwoDarray);
+
+#inset on row
+
+newRow = np.insert(twoDarray,0,[[50,60,70]],axis=0);
+print(newRow);
