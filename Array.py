@@ -90,3 +90,11 @@ def searchFromArray(array,value):
 
 print(nums);
 searchFromArray(nums,17);
+
+
+
+
+newArr = np.delete(nums,0,axis=0);#axis=0 means row
+print(newArr);
+newArr = np.delete(nums,0,axis=1);#axis=1 means col
+print(newArr);
