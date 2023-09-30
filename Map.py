@@ -41,6 +41,11 @@ print('hyderabad' in myDict);#[False] in operator not work for value
 
 print('hyderabad' in myDict.values());#[True]
 
+print(len(myDict));#return no of pair
+
+print(sorted(myDict));
+print(sorted(myDict,reverse=True));
+
 
 
 
