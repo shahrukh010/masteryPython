@@ -36,4 +36,12 @@ myDict['country'] = 'india';
 print(myDict);
 
 
+print('city' in myDict);#[True] in operator work for only key 
+print('hyderabad' in myDict);#[False] in operator not work for value
+
+print('hyderabad' in myDict.values());#[True]
+
+
+
+
 
