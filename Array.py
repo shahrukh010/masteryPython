@@ -7,16 +7,16 @@ print(arr1);
 print(arr1);
 
 arr2 = array('q',[10,20,30]);
-print(arr2);
-print(type(arr2));
-print(arr2[2]);
+#print(arr2);
+#print(type(arr2));
+#print(arr2[2]);
 
 
 def traverseArray(array):
     for nums in array:
         print(nums,':');
 
-traverseArray(arr1);
+#traverseArray(arr1);
 
 
 
@@ -28,7 +28,7 @@ def searchInArray(array,value):
     return 'The vlaue is not exist in this array';
 
 
-print('result:',searchInArray(arr1,6));
+#print('result:',searchInArray(arr1,6));
 
 
 
@@ -56,18 +56,37 @@ def accessElement(array,row,col):
     else:
         print(array[row][col]);
 
-accessElement(newRow,0,0);
+#accessElement(newRow,0,0);
 
 
 def traverseTwoDarray(array):
     for row in range(len(array)):
-        for col in range(len(array[0])):
+        for col in range(len(array[0])):#it will retun no of column
             print(array[row][col],end=" ");
         print();
 
 
-nums = np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+#nums = np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
 
-traverseTwoDarray(nums);
+#traverseTwoDarray(nums);
+print();
+print();
+print();
+print();
 
 
+
+
+nums = np.array([[11,15,10,6],[10,14,11,5],[12,17,12,8],[15,18,14,9]]);
+
+def searchFromArray(array,value):
+    for row in range(len(array)):
+        for col in range(len(array[0])):
+            if array[row][col] == value:
+                print("The value at",str(row),str(col));
+    return 'the value not present in array';
+
+
+
+print(nums);
+searchFromArray(nums,17);
