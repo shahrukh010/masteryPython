@@ -56,4 +56,32 @@ print(new_data);
 print(frame);
 #reindex of frame
 frame = frame.reindex([0,2,1]);
+print(frame['Profile']);
+#change profie(change column data)
+frame['Profile'] = 'Engineer';
 print(frame);
+#if column['Year'] not exist it will create new
+frame['Year'] = 2023
+print(frame);
+
+#Transpose Frame[T] Transpose;
+
+new_frame = frame.T;
+print(new_frame);
+
+new_frame = new_frame.T;
+print(new_frame);
+
+
+#drop row;
+fram2 = new_frame.drop([1]);
+print(fram2);
+
+#remove column
+frame2 = new_frame.drop(['Salary'],axis=1);
+print();
+print();
+print(frame2);
+
+
+
