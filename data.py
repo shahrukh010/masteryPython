@@ -83,5 +83,33 @@ print();
 print();
 print(frame2);
 
+print();
+print();
+print();
+
+data1 = {'speed':[100,103,105],
+         'temp':[68,23,44]
+        }
+data2 = {'speed':[100,103,105],
+         'temp':[68,23,44],
+         'humidity':[45,23,33]
+        }
+
+frame1 = DataFrame(data1);
+print(frame1);
+frame2 = DataFrame(data2);
+print();
+print(frame2);
+
+add_frame = frame1 + frame2;
+print(add_frame);
+series2 = Series([100,200,300],index=['speed','temp','humidity'])
+print('series2...');
+print(series2);
+
+from tabulate import tabulate
+new_fram = frame2 - series2;
+print(tabulate(new_fram,headers='keys',tablefmt='fancy_grid'));
+
 
 
