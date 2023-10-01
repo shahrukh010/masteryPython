@@ -22,6 +22,12 @@ class List:
             self.tail.next = node;
             self.tail = node;
 
+    def __iter__(self):# it is special method it will call automatically 
+        node = self.head;
+        while node:#as long as node is True
+            yield node;# it generator[It yields the current node object back to the caller]
+            node = node.next;
+
     def print_node(self):
 
         current = self.head;
@@ -38,8 +44,13 @@ lists.add(30);
 lists.add(40);
 lists.add(50);
 #print(lists.head.value);
-lists.print_node();
+#lists.print_node();
 #print(lists.tail.next);
+
+for node in lists:
+    print(node.value);
+
+#print([node.value for node in lists]);
 
 
 
