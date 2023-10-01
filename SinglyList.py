@@ -44,6 +44,16 @@ class List:
             tmp_node.next = new_node;
 
 
+    def traverse(self):
+        if self.head is None:
+            print('head is null');
+        else:
+            current_node = self.head;
+            while current_node is not None:
+                print(current_node.value);
+                current_node = current_node.next;
+        
+
 
     def __iter__(self):
         current = self.head;
@@ -73,6 +83,7 @@ singly.add_node(2,1);
 singly.add_node(60,9);
 
 print([node.value for node in singly]);
+singly.traverse();
 
 
 
