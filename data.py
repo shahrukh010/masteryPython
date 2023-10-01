@@ -3,7 +3,9 @@ from pandas import Series;
 
 data = {"Name":['annie','hector','bridget','nic'],
         "Age":[23,25,27,28],
-        "Salary":[2000,2300,2600,3000]}
+        "Salary":[2000,2300,2600,3000],
+        "Profile":'Doctor',
+        "Education":'MS'}
 
 frame = DataFrame(data);
 #print(frame);
@@ -24,3 +26,34 @@ series = Series([1,2,3,4,5],index=['a','b','c','d','e']);
 print(series);
 print(series['c']);
 
+#rearrange column of data(but name should be same(it case sensetive)
+new_data_frame = DataFrame(data,columns=['Name','Salary','Age','Profile']);
+print(new_data_frame);
+
+print('Retrive only specify data');
+print(new_data_frame['Salary']);
+#print(new_data_frame['Name']);
+
+print(new_data_frame.loc[1]);
+print(new_data_frame.iloc[3]);
+
+print();
+print();
+print();
+
+#new_frame = new_data_frame.T;
+new_frame = DataFrame(data);
+print(new_frame);
+
+
+#reindex of data index
+new_data = Series([50,100,200,250,300,350,400],index=['a','d','c','e','f','b','g']);
+print(new_data);
+new_data = new_data.reindex(['a','b','c','d','e','f','g']);
+print("After reindex");
+print(new_data);
+
+print(frame);
+#reindex of frame
+frame = frame.reindex([0,2,1]);
+print(frame);
