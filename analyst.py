@@ -29,3 +29,32 @@ print(series.index.is_unique);
 
 new_data = new_data.sum();
 print(new_data);
+
+
+import numpy as np;
+series = Series([1,2,3,4,np.nan],index=['a','b','c','d','e']);
+print(series);
+
+#drop nan values only
+series = series.dropna();
+print(series);
+
+data2 = {'speed':[101,np.nan,106],
+         'Temp':[34,23,42],
+         'Humidiyt':[4500,np.nan,5800]
+        }
+
+frame2 = DataFrame(data2);
+
+#console.print(tabulate(frame2,headers='keys',tablefmt='facny_grid'));
+console.print(tabulate(frame2,headers='keys',tablefmt='fancy_grid'));
+
+#drop nan value from data frame
+#frame2 = frame2.dropna();
+#console.print(tabulate(frame2,headers='keys',tablefmt='fancy_grid'));
+#assign value inplace of nan
+frame2 = frame2.fillna(0);
+console.print(tabulate(frame2,headers='keys',tablefmt='fancy_grid'));
+#assign value inplace of nan
+
+
