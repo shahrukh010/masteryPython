@@ -95,6 +95,8 @@ data2 = {'speed':[100,103,105],
          'humidity':[45,23,33]
         }
 
+
+
 frame1 = DataFrame(data1);
 print(frame1);
 frame2 = DataFrame(data2);
