@@ -33,3 +33,4 @@ data_frame = data_frame.sort_values(by='Title');
 console.print(tabulate(data_frame,headers='keys',tablefmt='fancy_grid'));
 
 
+
