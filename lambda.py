@@ -13,4 +13,5 @@ print(result);
 
 #default argument
 result = (lambda a=33,b=16:a-b)();
+result = (lambda a=33,b=16:a-b)(a = 50);
 print(result);
