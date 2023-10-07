@@ -16,6 +16,9 @@ class Vector:
         
         return f"X:{self.x},Y:{self.y}";
 
+    def __call__(self):
+        print("hi i was called...");
+
 
 v1 = Vector(10,20);
 v2 = Vector(50,60);
@@ -23,3 +26,4 @@ v2 = Vector(50,60);
 v3 = v1 + v2;
 print(v3.x,v3.y);
 print(v3);
+v3();
