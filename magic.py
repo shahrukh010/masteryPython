@@ -11,9 +11,15 @@ class Vector:
     def __del__(self):
        print("deconstrucot....")
 
+    #repr use for object representation to string representation
+    def __repr__(self):
+        
+        return f"X:{self.x},Y:{self.y}";
+
 
 v1 = Vector(10,20);
 v2 = Vector(50,60);
 
 v3 = v1 + v2;
 print(v3.x,v3.y);
+print(v3);
