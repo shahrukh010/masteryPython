@@ -21,8 +21,14 @@ class Person:
         return self.__age;
 
 
+    @staticmethod
+    def say():
+        return 'hello static';
+
 
 p = Person("Hector",25,"M");
 p.Name = 'annie';
 print(p.Name);
 print(p.Age);
+
+print(Person.say());
