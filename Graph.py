@@ -28,8 +28,22 @@ class Graphs:
     def remove_edge(self,vertext1,vertext2):
 
         if vertext1 in self.adjacency_list.keys() and vertext2 in self.adjacency_list.keys():
-            self.adjacency_list[vertext1].remove(vertext2);
-            self.adjacency_list[vertext2].remove(vertext1);
+            try:
+                self.adjacency_list[vertext1].remove(vertext2);
+                self.adjacency_list[vertext2].remove(vertext1);
+            except:
+                pass
+            return True;
+        return False;
+
+
+    def remove_vertext(self,vertext):
+
+        if vertext in self.adjacency_list.keys():
+
+            for other_vertext in self.adjacency_list[vertext]:
+                self.adjacency_list[other_vertext].remove(vertext);
+            del self.adjacency_list[vertext];
             return True;
         return False;
 
@@ -39,13 +53,22 @@ customGraph = Graphs();
 customGraph.add_vertex("A");
 customGraph.add_vertex("B");
 customGraph.add_vertex("C");
+customGraph.add_vertex("D");
 customGraph.add_edge('A','B');
 customGraph.add_edge("A","C");
+customGraph.add_edge("A","D");
 customGraph.add_edge("B","C");
+customGraph.add_edge("C","D");
 customGraph.print_graph();
 print("after removeing");
-customGraph.remove_edge("A","C");
+#customGraph.remove_edge("A","C");
+#customGraph.remove_edge("A","D");
 customGraph.print_graph();
+
+#After removed vertext;
+print("after removing vertext");
+customGraph.remove_vertext("D");
+print(customGraph.print_graph());
 
 
 
