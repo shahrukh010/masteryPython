@@ -1,4 +1,37 @@
 
+class Tree:
+
+    def __init__(self,data):
+        self.data = data;
+        self.leftChild = None;
+        self.rightChild = None;
+
+    
+    def preOrderTraversal(self,rootNode):
+        if not rootNode:
+            return;
+        print(rootNode.data);
+        self.preOrderTraversal(rootNode.leftChild);
+        self.preOrderTraversal(rootNode.rightChild);
+
+
+
+tree = Tree('Drink');
+leftChild = Tree('hot');
+rightChild= Tree('cold');
+tree.leftChild = leftChild;
+tree.rightChild = rightChild;
+#tree.preOrderTraversal(tree);
+print(tree);
+
+
+
+
+
+
+
+
+
 class TreeNode:
 
     def __init__(self,data,children=[]):
@@ -22,4 +55,4 @@ cold = TreeNode('Cold',[]);
 hot = TreeNode('Hot',[]);
 treeNode.addChild(cold);
 treeNode.addChild(hot);
-print(treeNode);
+#print(treeNode);
