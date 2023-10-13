@@ -49,6 +49,8 @@ class Graphs:
 
 
 
+
+
 customGraph = Graphs();
 customGraph.add_vertex("A");
 customGraph.add_vertex("B");
@@ -67,7 +69,7 @@ customGraph.print_graph();
 
 #After removed vertext;
 print("after removing vertext");
-customGraph.remove_vertext("D");
+#customGraph.remove_vertext("D");
 print(customGraph.print_graph());
 
 
@@ -85,6 +87,22 @@ class Graph:
     def addEdge(self,vertex,edge):
         self.gdict[vertex].append(edge);
 
+
+
+    def dfs(self,vertext):
+        
+        visited = [vertext];
+        queue = [vertext];
+
+        while queue:
+            devVertext = queue.pop(0);
+            print(devVertext);
+
+            for adjacency in self.gdict[devVertext]:
+                if adjacency not in visited:
+                    visited.append(adjacency);
+                    queue.append(adjacency);
+
 customDict = {"a":['b','c'],
               "b":['a','d','e'],
               "c":['a','e'],
@@ -96,6 +114,4 @@ graph = Graph(customDict);
 graph.addEdge("e",'c');
 print(graph.gdict);
 print(graph.gdict['e']);
-
-
-
+graph.dfs("a");
