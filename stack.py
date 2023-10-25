@@ -34,6 +34,7 @@ class Stack:
         else:
             return self.list[len(self.list)-1]
 
+
 stack = Stack();
 print(stack.isEmpty());        
 stack.push(10);
