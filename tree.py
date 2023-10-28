@@ -28,7 +28,3 @@ node.in_order(node);
 
 node = Node(8);
 node.in_order(node);
-
-
-
-
