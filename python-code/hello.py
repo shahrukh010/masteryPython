@@ -14,3 +14,13 @@ print(type(25));
 print(type('Hello'));
 print(type(25.5));
 print(type([10,20,30]));
+
+#check the size of memory taken by data;
+
+product_id=45532324;
+print(product_id.__sizeof__());#it will print 28bytes
+
+x = True;
+print(x)
+x =int(x);
+print(x);
