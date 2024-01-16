@@ -8,3 +8,9 @@ print(a,b,c);
 #declare and initialize same values
 a=b=c=1;
 print(a,b,c);
+
+#check the variable type
+print(type(25));
+print(type('Hello'));
+print(type(25.5));
+print(type([10,20,30]));
