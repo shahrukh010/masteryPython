@@ -24,3 +24,19 @@ x = True;
 print(x)
 x =int(x);
 print(x);
+
+#Base number conversion
+a = 10;
+print(bin(a));
+
+#Type converion
+x = 15;
+print(float(x));
+f = 20.00;
+print(int(f));
+
+s = '65';
+print(int(s));
+print(oct(20));
+
+
