@@ -39,4 +39,40 @@ s = '65';
 print(int(s));
 print(oct(20));
 
+#while loop 
+x = 10;
+while x !=0:
+#    print(x);
+    x = x-1
 
+print('iterating list');
+data = [10,20,30,40,50,60,70];
+
+while len(data) !=0:
+    print(data.pop());
+
+
+
+message = 'hello annie';
+
+for x in message:
+    print(x);
+
+
+#for loop using range function
+
+
+for x in range(1,5):
+    print(x,end=',');
+
+for x in range(1,10,2):
+    print(x,end=',');
+
+
+
+
+#Nested Loop
+
+for i in range(0,5):
+    for j in range(0,5):
+        print('[',i,',',j,']')
