@@ -76,3 +76,21 @@ for x in range(1,10,2):
 for i in range(0,5):
     for j in range(0,5):
         print('[',i,',',j,']')
+
+
+
+
+message = 'Hello Annie';
+
+
+for x in range(0,len(message)):
+    print('[',x,']',message[x]);
+
+
+print(message[0:len(message):1]);
+
+data  = message[::1];
+data = message[5::1]
+print(data);
+
+print(data[::-1]);
