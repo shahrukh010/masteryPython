@@ -94,3 +94,29 @@ data = message[5::1]
 print(data);
 
 print(data[::-1]);
+
+
+s = 'hello annie how are you';
+
+print(s.find('l'));
+print(s.find('a',7));
+
+print(s.rfind('l'));
+print(s.find('how'));
+
+#find(),index() both are same only difference is index throw exception if occurence not present.
+print(s.index('l'));
+
+#print(s.index('k'));
+
+#removing spaces or character;
+
+s = '  hello';
+print(s);
+print(s.strip());
+s = "... ...hello**";
+print(s.strip("."));
+print(s.strip(' .*'));
+
+
+
