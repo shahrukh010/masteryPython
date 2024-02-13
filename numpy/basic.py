@@ -78,3 +78,31 @@ from numpy.random import default_rng;
 rm = default_rng(42).random((2,3));
 print(rm);
 print(len(rm));
+
+
+
+#create 2 dimensional array of size 2X3 composed of 4bytes integer element
+
+x = numpy.array([[1,2,3],[4,5,6]],numpy.int32);
+print(x);
+print(type(x));
+
+#index of ndarray
+print(x[0,2]);#0 is first row ,2 is second index of row
+print(x[1,1]);
+
+
+
+#C-Contiguous(Row Major Order) 3X$
+
+c_contiguous_array = numpy.array([[1,2,3,4],
+                                  [5,6,7,8],
+                                  [9,10,11,12]
+                                 ])
+
+#iterating order
+for i in range(c_contiguous_array.shape[0]):
+    for j in range(c_contiguous_array.shape[1]):
+        print(f"ELement at index ({i}, {j}): {c_contiguous_array[i,j]}");
+
+
