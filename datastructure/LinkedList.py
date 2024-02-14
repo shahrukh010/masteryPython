@@ -63,6 +63,14 @@ class List:
             current = current.nextNode;
         current.nextNode = current.nextNode.nextNode;
 
+
+    def search(self,data):
+        current = self.head;
+        while current is not None:
+            if current.data == data:
+                return True;
+            current = current.nextNode;
+        return False;
         
 
     def print_node(self):
@@ -96,3 +104,4 @@ list.add_at(0,0);
 list.remove_at(1);
 list.print_node();
 print(list);
+print(list.search(0));
