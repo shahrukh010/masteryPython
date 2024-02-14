@@ -96,11 +96,43 @@ print(myList.index('hector khan'));
 
 #calculate the average of temprature.
 
-numDays = int(input("How many day's temperature?"));
-total = 0;
+#numDays = int(input("How many day's temperature?"));
+#total = 0;
+#
+#for index in range(1,numDays+1):
+#    nextDays = int(input("Day "+str(index)+"'s high temp:"));
+#    total +=nextDays; 
+#avg = round(total/numDays,2);
+#print("\nAverage = "+str(avg));
 
-for index in range(1,numDays+1):
-    nextDays = int(input("Day "+str(index)+"'s high temp:"));
-    total +=nextDays; 
-avg = round(total/numDays,2);
-print("\nAverage = "+str(avg));
+
+#find the missing 1 to n
+
+class Question:
+    result = [];
+
+    def find_all_missing(self,nums):
+        start = nums[0];
+        for index in range(1,len(nums)):
+            miss = nums[index] - index;
+            if miss !=start:
+                mr = index+start;
+                self.result.append(mr);
+                start +=1;
+                while start !=nums[index] - index:
+                    mr = index+start;
+                    self.result.append(mr);
+                    start +=1;
+
+question = Question();
+nums = [1,2,3,5,7,8,11,15];
+question.find_all_missing(nums);
+print(question.result);
+
+nums = [1,2,3,5,6,7];
+result = question.find_first_miss(nums);
+print(result);
+
+    
+
+
