@@ -92,3 +92,15 @@ print(myList);
 
 #return the index of myList
 print(myList.index('hector khan'));
+
+
+#calculate the average of temprature.
+
+numDays = int(input("How many day's temperature?"));
+total = 0;
+
+for index in range(1,numDays+1):
+    nextDays = int(input("Day "+str(index)+"'s high temp:"));
+    total +=nextDays; 
+avg = round(total/numDays,2);
+print("\nAverage = "+str(avg));
