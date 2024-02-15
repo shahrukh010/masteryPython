@@ -135,6 +135,24 @@ class Question:
                     result.append(i);
                     result.append(j);
         return result;
+#find the maximum product of two integer where all possible values are positive.
+    def max_product(self,nums):
+        result = [0,0];
+        current_max = 0;
+        
+        for i in range(len(nums)):
+            for j in range(i+1,len(nums)):
+                product = nums[i] * nums[j];
+                current_max = max(product,current_max);
+                if product >=current_max:
+                    result.clear();
+                    result.append(nums[i]);
+                    result.append(nums[j]);
+                    p = nums[i]*nums[j];
+                    result.append('product:'+str(p));
+
+
+        return result;
 
 
 
@@ -160,6 +178,28 @@ nums = [1,2,3,2,3,4,5,6];
 result = question.find_pair_target(nums,6);
 print(result);
 
+#using in operator.
+import numpy as np;
+
+array = np.array([1,2,3,4,6,8,9]);
+
+#target = int(input("Enter number to check"));
+#print(target in array);
+
+#for index in range(len(array)):
+#    if target == array[index]:
+#        print(True);
+#    else:
+#        print(False);
+#    break;
+#
+
+
+array = np.array([1,4,3,6,7,0]);
+array = np.array([-1, -3, -4, 2, 0, -5]);
+array = np.array([1,20,30,44,5,56,57,8,9,10,31,12,13,14,35,16,27,58,19,21]);
+result = question.max_product(array);
+print(result);
     
 
 
