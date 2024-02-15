@@ -124,13 +124,40 @@ class Question:
                     self.result.append(mr);
                     start +=1;
 
+    
+    def find_pair_target(self,nums,target):
+
+        result = [];
+        for i in range(len(nums)):
+            for j in range(i+1,len(nums)):
+                sum = nums[i] + nums[j];
+                if sum == target:
+                    result.append(i);
+                    result.append(j);
+        return result;
+
+
+
+
 question = Question();
 nums = [1,2,3,5,7,8,11,15];
 question.find_all_missing(nums);
-print(question.result);
+#print(question.result);
 
 nums = [1,2,3,5,6,7];
-result = question.find_first_miss(nums);
+#result = question.find_first_miss(nums);
+#print(result);
+
+nums = [2,6,3,9,11];
+result = question.find_pair_target(nums,9);
+nums = [2,7,11,15];
+result = question.find_pair_target(nums,9);
+nums = [3,2,4];
+result = question.find_pair_target(nums,6);
+nums = [3,3];
+result = question.find_pair_target(nums,6);
+nums = [1,2,3,2,3,4,5,6];
+result = question.find_pair_target(nums,6);
 print(result);
 
     
