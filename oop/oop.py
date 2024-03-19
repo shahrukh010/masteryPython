@@ -21,6 +21,7 @@ class Cuboid(Rectangle):
 #rectangle = Rectangle(2,3);
 #print(rectangle.area());
 
-cuboid = Cuboid(2,3,5);
-print(cuboid.volume());
+#cuboid = Cuboid(2,3,5);
+#print(cuboid.volume());
+
 
